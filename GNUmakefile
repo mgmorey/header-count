@@ -1,3 +1,6 @@
+CC := c99
+CFLAGS := -g -Wall
+
 all:		count-headers
 
 clean:
