@@ -43,11 +43,6 @@ static char* const headers[] = {"Accept",
                                 "WWW-Authenticate",
                                 NULL};
 
-static char** alloc_headers(size_t n)
-{
-    return calloc(n, sizeof(const char*));
-}
-
 static int compare_headers(const void* p, const void* q)
 {
     return strcmp(*(const char**)p, *(const char**)q);
@@ -55,7 +50,7 @@ static int compare_headers(const void* p, const void* q)
 
 static char** copy_headers(char* const* v, size_t n)
 {
-    char** w = alloc_headers(n);
+    char** w = calloc(n, sizeof *w);
     char* const* p = v;
     char** q = w;
 
