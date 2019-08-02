@@ -16,7 +16,7 @@
 
 BINARY := count-headers
 
-CFLAGS := -g -Wall
+CFLAGS := -g -Og -Wall
 
 all:		$(BINARY)
 
