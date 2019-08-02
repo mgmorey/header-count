@@ -16,7 +16,6 @@
 
 BINARY := count-headers
 
-CC := c99
 CFLAGS := -g -Wall
 
 all:		$(BINARY)
