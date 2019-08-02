@@ -1,11 +1,13 @@
+BINARY := count-headers
+
 CC := c99
 CFLAGS := -g -Wall
 
-all:		count-headers
+all:		$(BINARY)
 
 clean:
-		/bin/rm -f count-headers *.o
+		/bin/rm -f $(BINARY) *.o
 
-count-headers:	count-headers.c
+$(BINARY):	$(BINARY).c
 
 .PHONY:		all clean
